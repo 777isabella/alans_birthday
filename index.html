@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="birthday-container">
+    <h1>🎂 Happy Birthday, [Aan]! 🎉</h1>
+    <p>Birthday Fart</p>
+    <button id="celebrate-btn">Click to Celebrate! 🎈</button>
+  </div>
+
+  <!-- Confetti script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const btn = document.getElementById('celebrate-btn');
+    btn.addEventListener('click', () => {
+      confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.6 },
+      });
+    });
+  </script>
+</body>
+</html>
